@@ -1,0 +1,11 @@
+.avatar {
+    $self: &;
+    position: relative;
+    width: rem(105);
+    height: rem(105);
+}
+
+.avatarStyle{
+    width:28px;
+}
+

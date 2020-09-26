@@ -1,0 +1,48 @@
+@import "~bootstrap/scss/bootstrap";
+@import "../scss/mixins/mixin";
+@import "../scss/variables";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: $blue;
+
+    @include true-hover() {
+        text-decoration: underline;
+    }
+}
+*,*:focus,*:hover{
+    outline:none;
+}
+
+body {
+    font-family: Inter, Arial, sans-serif;
+    background-color: $body-color;
+}
+
+
+
+.main-wrapper{
+    padding-left: 70px;
+}
+.main{
+    padding: 40px;
+}
+.align-right{
+    text-align: right;
+}
+.white-sec{
+    background-color: $white;
+    padding: 20px 30px;
+    border-radius: 5px;
+}
+.ml10{
+    margin-left: 10px;
+}
+.btn{
+    display: inline-block;
+}
+label{
+    color: $primary-purple;
+}

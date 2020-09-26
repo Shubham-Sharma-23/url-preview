@@ -1,0 +1,66 @@
+
+//-----------------------------------------------------------------------
+//  FONT
+//  provides font size, line height and letter spacing styling all in one
+//  usage: @include font([fontsize]px [lineheight]px/normal [letterspacing]px);
+//-----------------------------------------------------------------------
+@mixin font($settings) {
+    @if length($settings) > 0 and type-of(nth($settings, 1)) == number {
+        font-size: nth($settings, 1) + px;
+        font-size: rem(nth($settings, 1));
+    }
+
+    @if length($settings) > 1 {
+        @if type-of(nth($settings, 2)) == number {
+            line-height: nth($settings, 2) + px;
+            line-height: rem(nth($settings, 2));
+        } @else {
+            line-height: nth($settings, 2);
+        }
+    }
+
+    @if length($settings) > 2 and type-of(nth($settings, 3)) == number {
+        letter-spacing: rem(nth($settings, 3));
+    }
+}
+
+//-----------------------------------------------------------------------
+//  HOVER
+//-----------------------------------------------------------------------
+//
+@mixin true-hover {
+    @media (any-hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+}
+
+//-----------------------------------------------------------------------
+//  FONT FAMILY
+//-----------------------------------------------------------------------
+//
+@mixin font-mixin($weight) {
+    font-family: Inter, Arial, sans-serif;
+    font-weight: $weight;
+}
+
+//-----------------------------------------------------------------------
+//  TYPOGRAPHY
+//-----------------------------------------------------------------------
+//
+@mixin heading-text {
+    @include font(40 43);
+}
+@mixin title-text {
+    @include font(32 39);
+}
+@mixin lead-text {
+    @include font(24 29);
+}
+@mixin subtitle-text {
+    @include font(16 24);
+}
+@mixin body-text {
+    @include font(13 19);
+}
