@@ -1,15 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import style from "./siteImage.module.scss";
 import classnames from "classnames";
 import { Image } from "react-bootstrap";
+import style from "./siteImage.module.scss";
 
 const SiteImage = ({ src, altText }) => {
     return (
         <div>
-            <div className={classnames(style.avatar, style.avatarStyle)}>
+            <div className={classnames(style.container, style.avatarStyle)}>
                 <span>
-                    <Image className={style.avatarStyle} src={src} alt={altText} roundedCircle />
+                    <Image className={style.siteImage} src={src} alt={altText} />
                 </span>
             </div>
         </div>

@@ -1,17 +1,30 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Row, Col } from "react-bootstrap";
 
-const DOMPreviewPanel = ({header, image, description, bottomURL}) => {
+import style from "./DOMPreview.module.scss";
+import SiteImage from "@atoms/siteImage";
+import Title from "@atoms/title";
+
+const DOMPreviewPanel = ({ title, image, description, bottomURL }) => {
+    console.log(description);
+
     return (
         <>
             <Row>
-                <Col></Col>
+                <Col>
+                    <SiteImage src={image} altText={""} />
+                </Col>
             </Row>
             <Row>
-                <Col></Col>
+                <Col>
+                    <Title size="medium" text={title} />
+                </Col>
             </Row>
             <Row>
-                <Col></Col>
+                <Col>{description}</Col>
+            </Row>
+            <Row>
+                <Col className={style.url}>{bottomURL}</Col>
             </Row>
         </>
     );

@@ -6,12 +6,10 @@ import { Image } from "react-bootstrap";
 
 const Avatar = ({ src, altText, className }) => {
     return (
-        <div>
-            <div className={classnames(style.avatar, style.avatarStyle)}>
-                <span>
-                    <Image className={style.avatarStyle} src={src} alt={altText} roundedCircle />
-                </span>
-            </div>
+        <div className={classnames(style.avatar, style.avatarStyle, className)}>
+            <span>
+                <Image className={style.avatarStyle} src={src} alt={altText} roundedCircle />
+            </span>
         </div>
     );
 };
