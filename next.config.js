@@ -7,6 +7,7 @@ const green = value => colors.green(value);
 const ENV = process.env.NODE_ENV || "development";
 const PORT = process.env.PORT || 3000;
 console.log(process.env);
+console.log("Port prod::", process.env.PORT);
 if (ENV === "development") {
   console.log(`${yellow("********** ")}${red("APPLICATION RUNNING IN DEVELOPMENT MODE")}${yellow(" *************")}`);
 } else {

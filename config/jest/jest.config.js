@@ -21,7 +21,6 @@ module.exports = {
     testMatch: ["**/?(*.)+(spec|test).[tj]s?(x)"],
     testEnvironment: "jsdom",
     testPathIgnorePatterns: ["node_modules"],
-    testURL: "http://test-petplan-buy.com",
     moduleNameMapper: {
         "^.+\\.(css|less|scss)$":"next/babel"
     }
