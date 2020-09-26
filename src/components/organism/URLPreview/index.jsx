@@ -26,7 +26,7 @@ const GenerateNewQuoteForm = () => {
                 </Col>
             </Row>
             <Row>
-                <Col>git 
+                <Col> 
                     {!isEmpty(domData) && <DOMPreviewPanel {...domData} bottomURL={extractedURL} />}
                 </Col>
             </Row>
