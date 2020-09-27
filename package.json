@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "cross-env NODE_OPTIONS='--inspect' NODE_ENV=development next dev",
     "build": "next build",
-    "start": "npm run build && next start",
+    "start": "npm run build && next start -p $PORT",
     "prettier": "cross-env prettier  --check '**/*.{js,jsx}' ",
     "prettier:fix": "cross-env prettier  --check --write '**/*.{js,jsx}' ",
     "lint": "cross-env eslint --ext .jsx,.js",
