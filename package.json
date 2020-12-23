@@ -2,6 +2,7 @@
   "name": "URLPreview",
   "version": "0.1.0",
   "private": true,
+  "author": "Shubham Sharma",
   "scripts": {
     "dev": "cross-env NODE_OPTIONS='--inspect' NODE_ENV=development next dev",
     "build": "next build",
